@@ -1,0 +1,313 @@
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --muted: #555555;
+  --brand: #3b82f6;       /* blue */
+  --brand-dark: #1e40af;
+  --border: #e5e7eb;
+  --card-bg: #f9fafb;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --brand: #60a5fa;
+  --brand-dark: #2563eb;
+  --border: #1e293b;
+  --card-bg: #1e293b;
+}
+
+/* -------------------- */
+/* Page Layout */
+/* -------------------- */
+.edit-tutorial {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-tutorial h1 {
+  font-size: 2rem;
+  color: var(--brand-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* -------------------- */
+/* Form Styling */
+/* -------------------- */
+.edit-tutorial form {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edit-tutorial input {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.edit-tutorial input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* -------------------- */
+/* Buttons */
+/* -------------------- */
+.edit-tutorial button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.edit-tutorial button:hover {
+  transform: translateY(-1px);
+}
+
+.edit-tutorial button[type="submit"] {
+  background: var(--brand);
+  color: #fff;
+  align-self: flex-start;
+}
+
+.edit-tutorial button[type="submit"]:hover {
+  background: var(--brand-dark);
+}
+
+.edit-tutorial button[type="button"] {
+  background: var(--card-bg);
+  color: var(--brand-dark);
+  border: 1px solid var(--border);
+}
+
+.edit-tutorial button[type="button"]:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* -------------------- */
+/* Section Styling */
+/* -------------------- */
+.section-input {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-input input {
+  width: 100%;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+/* Delete Section Button */
+.delete-section {
+  background: #ef4444;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 0.6rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-section:hover {
+  background: #dc2626;
+}
+
+/* -------------------- */
+/* TipTap Editor & Toolbar */
+/* -------------------- */
+.tiptap-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 8px;
+}
+
+.tiptap-toolbar button {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.tiptap-toolbar button:hover {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand-dark);
+}
+
+.tiptap-toolbar .is-active {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand-dark);
+}
+
+/* -------------------- */
+/* TipTap Editor */
+/* -------------------- */
+.tiptap-editor {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 200px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  margin-top: 6px;
+}
+
+.tiptap-editor p {
+  margin: 0 0 10px;
+}
+
+.tiptap-editor pre {
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+  color: var(--text);
+  font-family: "Fira Code", monospace;
+}
+
+/* -------------------- */
+/* Responsive */
+/* -------------------- */
+@media (max-width: 768px) {
+  .edit-tutorial {
+    padding: 2rem 1rem;
+  }
+
+  .edit-tutorial form {
+    padding: 1.2rem;
+  }
+
+  .tiptap-toolbar {
+    gap: 4px;
+  }
+}
+.edit-tutorial {
+  padding: 3rem 2rem;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.edit-tutorial h1 {
+  color: var(--brand-dark);
+  margin-bottom: 1.5rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.edit-form input {
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.image-upload label {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.image-upload input[type="file"] {
+  padding: 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.image-preview img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  margin-top: 0.5rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-actions button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-actions button[type="submit"] {
+  background: var(--brand);
+  color: white;
+}
+
+.edit-actions button[type="submit"]:hover {
+  background: var(--brand-dark);
+}
+
+.edit-actions button[type="button"] {
+  background: #ef4444;
+  color: white;
+}
+
+.edit-actions button[type="button"]:hover {
+  background: #dc2626;
+}

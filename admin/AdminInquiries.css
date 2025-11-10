@@ -1,0 +1,135 @@
+/* ====== COLOR THEMES ====== */
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --muted: #555555;
+  --brand: #3b82f6;
+  --brand-dark: #1e40af;
+  --border: #e5e7eb;
+  --card-bg: #f9fafb;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --brand: #60a5fa;
+  --brand-dark: #2563eb;
+  --border: #1e293b;
+  --card-bg: #1e293b;
+}
+
+/* ====== MAIN CONTAINER ====== */
+.admin-inquiries {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+
+  /* ✅ Space for fixed sidebar */
+  margin-left: var(--sidebar-width, 240px);
+}
+
+/* ✅ Fix alignment when sidebar is collapsed */
+.admin-sidebar.collapsed ~ .admin-main .admin-inquiries {
+  margin-left: var(--sidebar-collapsed, 70px);
+}
+
+/* ====== HEADING ====== */
+.admin-inquiries h1 {
+  text-align: center;
+  color: var(--brand-dark);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ====== MESSAGE TEXT ====== */
+.admin-inquiries p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+/* ====== TABLE WRAPPER ====== */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+/* ====== TABLE ====== */
+.admin-inquiries table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* ====== TABLE HEADER ====== */
+.admin-inquiries th {
+  background-color: var(--brand-dark);
+  color: #f1f5f9;
+  font-weight: 600;
+  padding: 14px 18px;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* ====== TABLE CELLS ====== */
+.admin-inquiries td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+  transition: background-color 0.2s ease;
+}
+
+/* Zebra rows */
+.admin-inquiries tbody tr:nth-of-type(even) {
+  background-color: var(--bg);
+}
+
+/* Hover row */
+.admin-inquiries tbody tr:hover {
+  background-color: var(--border);
+}
+
+/* Last row cleanup */
+.admin-inquiries tbody tr:last-of-type td {
+  border-bottom: none;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1024px) {
+  .admin-inquiries {
+    margin-left: var(--sidebar-collapsed, 70px);
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-inquiries {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .admin-inquiries h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-inquiries th,
+  .admin-inquiries td {
+    padding: 10px 12px;
+  }
+}
